@@ -4,16 +4,5 @@
  * @returns {*[]} - the new array with uniq values
  */
 export function uniq(arr) {
-if(typeof arr === "undefined") {
-	return [];
-}
-let result = [];
-
-  for (let str of arr) {
-    if (!result.includes(str)) {
-      result.push(str);
-    }
-  }
-
-  return result;
+return [...new Set (arr)];
 }
