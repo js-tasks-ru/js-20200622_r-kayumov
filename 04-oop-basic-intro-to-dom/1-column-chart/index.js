@@ -7,8 +7,7 @@ export default class ColumnChart {
     data = [],
     label = '',
     link = '',
-    value = 0
-  } = {}) {
+    value = 0} = {}) {
     this.data = data;
     this.label = label;
     this.link = link;
@@ -20,11 +19,9 @@ export default class ColumnChart {
   getColumnBody(data) {
     const maxValue = Math.max(...data);
 
-    return data
-    .map(item => {
+    return data.map(item => {
       const scale = this.chartHeight / maxValue;
       const percent = (item / maxValue * 100).toFixed(0);
-
       return `<div style="--value: ${Math.floor(item * scale)}" data-tooltip="${percent}%"></div>`;
     })
     .join('');
