@@ -61,3 +61,5 @@ export default class NotificationMessage {
     NotificationMessage.activeNotification = null;
   }
 }
+
+
