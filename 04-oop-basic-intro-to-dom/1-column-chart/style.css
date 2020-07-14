@@ -68,7 +68,7 @@ body {
 }
 
 .column-chart__chart div.is-hovered {
-  opacity: 1;
+  opacity: 5;
 }
 
 .column-chart__chart.has-hovered div:not(.is-hovered) {
